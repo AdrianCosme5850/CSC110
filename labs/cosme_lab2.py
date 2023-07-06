@@ -18,16 +18,16 @@ totalAndTip = format(subTotal+subTotal*salesTax + subTotal*tipPercent, '.2f')
 
 # Outputs 
 
-print('Amount of bill: $' + str(subTotal))
-print("Tip percent: " + str(int(tipPer)))
-print("***************")
-print("Subtotal             $" + str(subTotal))
-print("Sales Tax             $" + format(subTotal * salesTax, '.2f'))
-print('     --------       ')
-print('Total                   $' + total)
-print('Tips                    $' + tip)
-print('**********************')
-print('Balance due              $' + totalAndTip)
+print(format('Amount of bill: ')+ format(subTotal, '.2f'))
+print(format("Tip percent: ") + format(tipPer, '.0f'))
+print("*"*30)
+print(format("Subtotal", '20s') + '$' +format(subTotal, '.2f'))
+print(format('Sales Tax', '20s') + '$' + format(subTotal * salesTax, '.2f'))
+print('-'*30)
+print(format('Total', '20s') + '$' + total)
+print(format('Tips', '20s') + '$' + tip)
+print('*'*30)
+print(format('Balance Due', '20s') + '$' + totalAndTip)
 print('Thank you!')
 
 
@@ -35,3 +35,7 @@ print('Thank you!')
 # Had some trouble figuring out how to use the formatting function. There
 # are a few areas that could be cut down and simplified. Will probably
 # spend more time planning the program before hoping into coding.
+
+# Resubmit
+# Redid the print statements to use '*'*30 instead of individual whitespaces, and used format for all of the numbers
+# Works a lot better now.
